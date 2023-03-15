@@ -10,6 +10,7 @@ After=local-fs.target
 [Service]
 Type=simple
 User={{ grafana_agent_user }}
+Environment=HOSTNAME=%H
 Group={{ grafana_agent_user_group }}
 WorkingDirectory={{ grafana_agent_data_dir }}
 EnvironmentFile={{ grafana_agent_config_dir }}/{{ grafana_agent_env_file}}
